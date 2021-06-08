@@ -7,6 +7,8 @@
       <input class="form-check-input" type="checkbox" id=<%= task.title %>>
     <% end %>
     <%= link_to task.title.capitalize, task_path(task) %>
+    <%= link_to "X", delete_task_path(task.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
     <br/>
   <% end %>
 </div>
+<%= link_to "Create Task", new_task_path, class: "btn btn-primary mt-3" %>
