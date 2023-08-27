@@ -5,6 +5,10 @@
     <input class="d-flex form-check-input me-1" type="checkbox"
       <%= task.completed ? "checked" : "" %>
     >
-    <div class="title"><%= task.title %></div>
+    <div class="title">
+    <%= link_to task.title,
+      task_path(task)
+    %>
+    </div>
   </div>
 <% end %>
